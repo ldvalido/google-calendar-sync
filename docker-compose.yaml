@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  calendar-tool:
+    build: .
+    container_name: calendar-tool
+    volumes:
+      - .:/app
+    entrypoint: ["poetry", "run", "python", "main.py"]
